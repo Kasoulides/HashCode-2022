@@ -1,9 +1,9 @@
 package qualRound;
 
-public final class Person {
+public final class Contributor {
     final Skill[] skills;
 
-    public Person(Skill[] skills) {
+    public Contributor(Skill[] skills) {
         this.skills = skills;
     }
 }

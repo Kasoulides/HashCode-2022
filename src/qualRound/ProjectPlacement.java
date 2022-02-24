@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class ProjectPlacement {
     Project project;
-    Person[] people;
+    Contributor[] people;
 
 
     boolean isValid(){

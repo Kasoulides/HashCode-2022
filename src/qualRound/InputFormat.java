@@ -1,11 +1,13 @@
+package qualRound;
 
+import practiceRound.Client;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
 
-public class Testing {
+public class InputFormat {
+
 
     public static String readAllData(String filePath) throws IOException {
 
@@ -21,14 +23,14 @@ public class Testing {
         return content;
     }
 
-    public static Contributor[] createContributors(String fileContent) {
+    public static Client[] createClients(String fileContent) {
 
 
         String[] lines = fileContent.split("\n");
 
         int noOfClients = Integer.parseInt(lines[0]);
 
-        Contributor[] clients = new Contributor[noOfClients];
+        Client[] clients = new Client[noOfClients];
 
         //System.out.println(lines[3]);
 
@@ -52,21 +54,10 @@ public class Testing {
             }
 
 
-            clients[i] = new Contributor(i + 1, likes, dislikes);
+            clients[i] = new Client(i + 1, likes, dislikes);
 
 
         }
         return clients;
     }
-
-    public static void main(String[] args) throws IOException {
-
-
-        String fileContent = readAllData("input datasets/a_an_example.in.txt");
-
-
-        System.out.println(Arrays.toString(createContributor(fileContent)));
-
-    }
-
 }
