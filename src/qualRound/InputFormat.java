@@ -23,14 +23,14 @@ public class InputFormat {
         return content;
     }
 
-    public static Client[] createClients(String fileContent) {
+    public static Contributor[] createContributor(String fileContent) {
 
 
         String[] lines = fileContent.split("\n");
 
         int noOfClients = Integer.parseInt(lines[0]);
 
-        Client[] clients = new Client[noOfClients];
+        Contributor[] contributor = new Contributor[noOfClients];
 
         //System.out.println(lines[3]);
 
@@ -54,10 +54,10 @@ public class InputFormat {
             }
 
 
-            clients[i] = new Client(i + 1, likes, dislikes);
+           // contributor[i] = new Contributor();
 
 
         }
-        return clients;
+        return contributor;
     }
 }

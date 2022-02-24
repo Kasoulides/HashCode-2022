@@ -1,4 +1,6 @@
+package practiceRound;
 
+import practiceRound.Client;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,14 +23,14 @@ public class Testing {
         return content;
     }
 
-    public static Contributor[] createContributors(String fileContent) {
+    public static Client[] createClient(String fileContent) {
 
 
         String[] lines = fileContent.split("\n");
 
         int noOfClients = Integer.parseInt(lines[0]);
 
-        Contributor[] clients = new Contributor[noOfClients];
+        Client[] clients = new Client[noOfClients];
 
         //System.out.println(lines[3]);
 
@@ -52,7 +54,7 @@ public class Testing {
             }
 
 
-            clients[i] = new Contributor(i + 1, likes, dislikes);
+            clients[i] = new Client(i + 1, likes, dislikes);
 
 
         }
@@ -65,7 +67,7 @@ public class Testing {
         String fileContent = readAllData("input datasets/a_an_example.in.txt");
 
 
-        System.out.println(Arrays.toString(createContributor(fileContent)));
+        System.out.println(Arrays.toString(createClient(fileContent)));
 
     }
 

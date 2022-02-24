@@ -7,8 +7,8 @@ public class ProjectPlacement {
     Contributor[] people;
 
 
-    boolean isValid(){
-        HashMap<String,Boolean> personTaken;
+    boolean isValid() {
+        HashMap<String, Boolean> personTaken;
 
     }
 }
